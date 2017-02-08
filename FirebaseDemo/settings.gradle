@@ -1,1 +1,1 @@
-include ':app', ':cobalt', ':Plugins-AppInfos-Android'
+include ':app', ':cobalt', ':Plugins-AppInfos-Android', ':cobalt-plugin-fcm-android'

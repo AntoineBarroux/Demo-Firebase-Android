@@ -26,7 +26,15 @@ dependencies {
     })
     compile project(':cobalt')
     compile project(':Plugins-AppInfos-Android')
+    compile project(':cobalt-plugin-fcm-android')
     compile 'com.android.support:appcompat-v7:23.4.0'
     compile 'com.android.support:support-v4:23.4.0'
+    compile 'com.google.firebase:firebase-messaging:9.6.1'
     testCompile 'junit:junit:4.12'
 }
+
+
+
+
+
+apply plugin: 'com.google.gms.google-services'

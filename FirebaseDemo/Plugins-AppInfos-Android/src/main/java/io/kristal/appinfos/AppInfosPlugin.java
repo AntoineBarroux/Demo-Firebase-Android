@@ -68,9 +68,8 @@ public class AppInfosPlugin extends CobaltAbstractPlugin {
      * CONSTRUCTORS
      **************************************************************************************/
 
-    public static CobaltAbstractPlugin getInstance(CobaltPluginWebContainer webContainer) {
+    public static CobaltAbstractPlugin getInstance(Context context) {
         if (sInstance == null) sInstance = new AppInfosPlugin();
-        sInstance.addWebContainer(webContainer);
         return sInstance;
     }
 

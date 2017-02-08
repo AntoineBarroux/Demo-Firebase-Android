@@ -6,3 +6,9 @@
 	path = FirebaseDemo/app/src/main/assets/platform
 	url = https://github.com/cobaltians/Cobalt-Web-Android.git
 	branch = develop
+[submodule "FirebaseDemo/app/src/main/assets/cobalt-plugin-fcm-web"]
+	path = FirebaseDemo/app/src/main/assets/cobalt-plugin-fcm-web
+	url = http://sd-66128.dedibox.fr/kristal/cobalt-plugin-fcm-web.git
+[submodule "FirebaseDemo/cobalt-plugin-fcm-android"]
+	path = FirebaseDemo/cobalt-plugin-fcm-android
+	url = http://sd-66128.dedibox.fr/kristal/cobalt-plugin-fcm-android.git

@@ -1,6 +1,9 @@
 package io.kristal.firebasedemo;
 
+import io.kristal.fcmplugin.FcmPlugin;
 import android.app.Application;
+
+
 import org.cobaltians.cobalt.Cobalt;
 
 /**
@@ -12,6 +15,7 @@ public class FirebaseDemo extends Application {
     public void onCreate(){
         super.onCreate();
         Cobalt.getInstance(this).setResourcePath("common/");
+        FcmPlugin.getInstance(Cobalt.getAppContext());
     }
 
 }

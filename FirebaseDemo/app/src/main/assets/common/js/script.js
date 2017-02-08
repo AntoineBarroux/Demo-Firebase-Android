@@ -14,17 +14,20 @@ var listeTopics;
 
 cobalt.getAppInfos(function(infos){
     uid = infos.deviceId;
-    console.log("UID = ", uid);
+    cobalt.log('UID :', uid);
 });
 
-/*
+cobalt.sendEvent("getApiKey", {}, function(data){
+    apiKey = data.apiKey;
+    cobalt.log('ApiKey = ', apiKey);
+});
 
-cobalt.getToken(function(infos){
+
+
+
+cobalt.fcm.getToken(function(infos){
     cobalt.log("TOKEN RECU PAR LE WEB = ", infos.token);
     token = infos.token
-
-    cobalt.sendEvent("getApiKey", {}, function(data){
-        apiKey = data.apiKey;
 
         var donnees = {
             'application': 'FirebaseDemo',
@@ -34,11 +37,11 @@ cobalt.getToken(function(infos){
         };
 
 
-        cobalt.tokenRegister(donnees, function(data){
+        cobalt.fcm.tokenRegister(donnees, function(data){
             cobalt.log("Enregistrement du token : ", data.message);
         });
 
-        cobalt.getTopics(donnees, function(data){
+        cobalt.fcm.getTopics(donnees, function(data){
             cobalt.log("Récupération des topics... Liste des topics = ", data);
             listeTopics = data;
 
@@ -79,13 +82,13 @@ cobalt.getToken(function(infos){
             var id = $(this).attr('id');
 
             if ($(this).hasClass('abo')){
-                cobalt.unsubscribeFromTopic(id, function(){});
+                cobalt.fcm.unsubscribeFromTopic(id, function(){});
                 $(this).removeClass('abo');
             }
             else{
-                cobalt.subscribeToTopic(id, function(){
+                cobalt.fcm.subscribeToTopic(id, function(){
                     donnees.topic = id;
-                    cobalt.saveTopic(donnees);
+                    cobalt.fcm.saveTopic(donnees);
                     //On sauvegarde le topic au niveau du serveur : s'il existe déjà, ne fait rien, sinon l'enregistre en BDD
                 });
                 $(this).addClass('abo');
@@ -97,14 +100,13 @@ cobalt.getToken(function(infos){
             'body': 'Test envoi de notif a partir de l\'API',
             'sound': 'default'
         });
-        cobalt.sendNotification(donnees, function(data){
+        cobalt.fcm.sendNotification(donnees, function(data){
             cobalt.log("Envoi de notif... ", data);
         });
     });
 
-});
 
-*/
+
 
 
 

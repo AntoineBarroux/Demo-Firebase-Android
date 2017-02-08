@@ -12,6 +12,7 @@
             <option value="$PROJECT_DIR$/Plugins-AppInfos-Android" />
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/cobalt" />
+            <option value="$PROJECT_DIR$/cobalt-plugin-fcm-android" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

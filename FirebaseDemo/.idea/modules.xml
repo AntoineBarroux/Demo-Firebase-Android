@@ -6,6 +6,7 @@
       <module fileurl="file://$PROJECT_DIR$/Plugins-AppInfos-Android/Plugins-AppInfos-Android.iml" filepath="$PROJECT_DIR$/Plugins-AppInfos-Android/Plugins-AppInfos-Android.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/cobalt/cobalt.iml" filepath="$PROJECT_DIR$/cobalt/cobalt.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cobalt-plugin-fcm-android/cobalt-plugin-fcm-android.iml" filepath="$PROJECT_DIR$/cobalt-plugin-fcm-android/cobalt-plugin-fcm-android.iml" />
     </modules>
   </component>
 </project>
